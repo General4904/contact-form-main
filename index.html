@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">  
-  <link rel="stylesheet" href="styles/styles.css">
-  <title>Frontend Mentor | Contact form</title>
-  <script src="main.js" async></script>
-</head>
-<body>
-
-  <div id= "content">
-    <form id="contact">
-      <div id="us">
-        <h1>
-          Contact Us
-        </h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Contact form</title>
+    <script src="main.js" async></script>
+  </head>
+  <body>
+    <div id="content">
+      <div id="overlay">
+        <p id="sent">Message sent!</p>
+        <p>Thanks for completing the form. We'll be in touch soon.</p>
       </div>
+      <form id="contact">
+        <div id="us">
+          <h1>Contact Us</h1>
+        </div>
 
-      <div id="names">
-        <ul>
-          <li id="first-name-error"><label for= "name1">Firstname *</label>
-            <input type="text" name="firstname" id="first" class="name-field">
-            <!-- <p>This field is required</p> -->
-          </li>
+        <div id="names">
+          <ul>
+            <li id="first-name-error">
+              <label for="name1" class="tag">Firstname *</label>
+              <input
+                type="text"
+                name="firstname"
+                id="first"
+                class="name-field"
+              />
+            </li>
 
-          <li id="last-name-error"><label for= "name2">Lastname *</label>
-            <input type="text" name="lastname" id="last" class="name-field">
-            <!-- <p class="name-error">This field is required</p> -->
-          </li>
-        </ul>
+            <li id="last-name-error">
+              <label for="name2" class="tag">Lastname *</label>
+              <input type="text" name="lastname" id="last" class="name-field" />
+            </li>
+          </ul>
 
-        <label for= "_mail">Email *</label>
-        <input type="email" name="mail" id="mail">
-        <p>Please enter a valid email address</p>
-      </div>
+          <div id="mailing">
+            <label for="_mail" class="tag">Email *</label>
+            <input type="text" name="mail" id="mail" />
+          </div>
+        </div>
 
-      <div id="radio">
-        <p>Query type *</p>
-          <div id= "pick">
-            <div class= "type">
-             <input type="radio" name="query" id="general"> General Enquiry
-            </div> 
+        <div id="radio">
+          <p class="tag">Query type *</p>
+          <div id="pick">
+            <div class="type">
+              <input type="radio" name="query" id="general" /> General Enquiry
+            </div>
 
-            <div class= "type">
-              <input type="radio" name="query" id="support"> Support Request
+            <div class="type">
+              <input type="radio" name="query" id="support" /> Support Request
             </div>
           </div>
-          <p id= "error">Please select a query</p>
+          <p id="error">Please select a query</p>
+        </div>
+
+        <div id="message">
+          <p class="tag">Message *</p>
+          <textarea id="messageSent" name="message"></textarea>
+          <p class="error">This field is required</p>
+        </div>
+
+        <div id="consent">
+          <div id="check">
+            <input type="checkbox" name="consent" id="" />
+            <p class="tag">I consent to being contacted by the team *</p>
+          </div>
+        </div>
+
+        <div id="submit">
+          <p id="respond"><button type="submit">Submit</button></p>
+        </div>
+      </form>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Generalissimo</a>.
       </div>
+    </div>
 
-      <div id="message">
-        <p>Message *</p>
-        <input type="text" name="message" id="">
-        <p class="error">This field is required</p>
-      </div>
-
-      <div id="consent">
-        <div id="check">
-          <input type="checkbox" name="consent" id=""> 
-          <p>I consent to being contacted by the team *</p>
-      </div>
-
-        <p class= "error">To submit this form, please consent to being contacted</p>
-      </div>
-
-      <div id="submit">
-        <p id="respond"><button type="submit">Submit</button></p>
-      </div>
-    </form>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-      Coded by <a href="#">Generalissimo</a>.
-    </div>  
-  </div>
-
-
-
-
-
-  <!--    Submit Message 
+    <!--    Submit Message 
   Sent! Thanks for completing the form. We'll be in touch soon! -->
-</body>
+  </body>
 </html>

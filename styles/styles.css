@@ -1,131 +1,259 @@
 /* Styles */
-body{
-    background-color: hsl(148, 38%, 91%);
-    padding: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  background-color: hsl(148, 38%, 91%);
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla", sans-serif;
 }
 
-
-#content{
-    width: 40em;
+#content {
+  width: 40em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-form{
-    background-color: hsl(0, 0%, 100%);
-    padding: 1.5em;
-    border-radius: 6px;
-    margin-bottom: 8px;
+#content #overlay {
+  color: white;
+  width: 200px;
+  padding: 1em;
+  display: none;
+  background-color: hsl(169, 82%, 27%);
+  border: 1px solid hsl(169, 82%, 27%);
+  border-radius: 6px;
 }
 
-form input{
-    border: 1px solid black;
-    border-radius: 6px;
+#content #overlay p#sent {
+  margin: 0;
+  text-align: left;
 }
 
-form #names input{
-    padding: 2px 1em;
-    height: 2.2em;
+form {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5em;
+  border-radius: 6px;
+  margin-bottom: 8px;
 }
 
-form ul{
-    margin: 2em 0;
+form .tag {
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(187, 24%, 22%);
+}
+
+form input {
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+form #names input {
+  padding: 2px 1em;
+  height: 2.2em;
+}
+
+form #names input:hover,
+form #names input:active {
+  border-color: hsl(169, 82%, 27%);
+}
+
+form ul {
+  margin: 2em 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+form ul li input {
+  width: 22em;
+}
+
+form #mailing {
+  display: flex;
+  flex-direction: column;
+}
+
+form #names ul li p#name-error {
+  /* color: red; */
+  margin: 0.3em 0 0 0;
+  /* display: none; */
+}
+
+form #mail {
+  margin: 0 0 0 0;
+  width: 47em;
+}
+
+form #names p {
+  margin: 0.3em 0 0 0;
+  display: none;
+}
+
+form #radio {
+  margin: 3em 0;
+}
+
+form #radio p {
+  margin-top: 1px;
+}
+
+form #radio #pick {
+  margin: 1em 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 2em;
+}
+
+form #radio #pick .type {
+  border: 1px solid black;
+  border-radius: 6px;
+  width: 18em;
+  height: 2.2em;
+  padding: 0px 8px;
+  justify-self: center;
+}
+
+form #radio p#error {
+  margin: 0.3em 0 0 0;
+  display: none;
+}
+
+form #message {
+  margin: 1em 0;
+}
+
+form #message p {
+  margin-top: 1px;
+}
+
+form #message textarea {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  padding: 1em;
+  width: 47em;
+  height: 7em;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+form #message p.error {
+  margin: 0.3em 0 0 0;
+  display: none;
+}
+
+form #consent #check {
+  margin-bottom: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+form #consent #check input {
+  color: hsl(169, 82%, 27%);
+}
+
+form #consent p.error {
+  margin: 0.3em 0 0 0;
+  display: none;
+}
+
+form #consent p {
+  margin-top: 2px;
+}
+
+form #submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form #submit p button {
+  font-size: 16px;
+  color: white;
+  padding: 1em 20em;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid hsl(169, 82%, 27%);
+  background-color: hsl(169, 82%, 27%);
+  border-radius: 8px;
+}
+
+form #submit p button:hover {
+  background-color: hsl(170, 78%, 15%);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(169, 82%, 27%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: hsl(170, 78%, 15%);
+}
+
+/* Mobile Devices */
+@media screen and (min-width: 320px) and (max-width: 690px) {
+  body {
     padding: 0;
     display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    gap: 1em;
-}
+    flex-direction: column;
+  }
 
-form ul li input{
-    width: 20em;
-}
-
-form #names ul li p#name-error{
-    /* color: red; */
-    margin: 0.3em 0 0 0;
-    /* display: none; */
-}
-
-form #mail{
-    margin: 0 0 0 0;
-    width: 43em;
-}
-
-form #names p{
-    margin: 0.3em 0 0 0;
-    display: none;
-}
-
-form #radio{
-    margin: 3em 0;
-}
-
-form #radio #pick{
-    margin:  1em 0 0 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 2em;
-}
-
-form #radio #pick .type{
-    border: 1px solid black;
-    border-radius: 6px;
-    width: 20em;
-    height: 2.2em;
-    padding: 0px 8px;
-    justify-self: center;
-}
-
-form #radio p#error{
-    margin: 0.3em 0 0 0;
-    display: none;
-}
-
-form #message{
-    margin: 1em 0;
-}
-
-form #message input{
-    width: 43em;
-    height: 7em;
-    border: 1px solid black;
-    border-radius: 6px;
-}
-
-form #message p.error{
-    margin: 0.3em 0 0 0;
-    display: none;
-}
-
-form #consent #check{
-    display: flex;
-    gap: 10px;
-}
-
-form #consent p.error{
-    margin: 0.3em 0 0 0;
-    display:  none;
-}
-
-form #submit{
+  #content {
+    padding: 0;
+    width: 10em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+  }
 
-/* form #submit p{
-    text-align: center;
-} */
+  form#contact {
+    width: 18em;
+    padding: 2em 0.5em;
+  }
 
-.attribution{
-    font-size: 11px; 
-    text-align: center; 
-}
+  form ul {
+    display: flex;
+    flex-direction: column;
+  }
 
-.attribution a{
-    color: hsl(228, 45%, 44%);
+  form #names input {
+    width: 19em;
+    display: block;
+  }
+
+  form #radio #pick {
+    margin: 1em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  form #radio #pick .type {
+    width: 16em;
+  }
+
+  form #message textarea {
+    width: 15em;
+  }
+
+  form #submit p button {
+    padding: 1em 6em;
+  }
 }
